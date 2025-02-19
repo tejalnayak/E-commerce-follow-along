@@ -4,7 +4,7 @@ export default function Product({ name, images, description, price }) {
  useEffect(() => {
    if (!images || images.length === 0) return;
    const interval = setInterval(() => {
-     setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+     setCurrentIndex(prevIndex => (prevIndex +1) % images.length);
    }, 2000);
    return () => clearInterval(interval); // Cleanup on unmount
  }, [images]);
