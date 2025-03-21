@@ -55,7 +55,7 @@ const Signup = () => {
 
 
     axios
-      .post("http://localhost:8000/api/v2/user", newForm, config)
+      .post("http://localhost:5000/api/v2/user", newForm, config)
       .then((res) => {
         console.log("res", res)
         toast.success(res.data.message);
