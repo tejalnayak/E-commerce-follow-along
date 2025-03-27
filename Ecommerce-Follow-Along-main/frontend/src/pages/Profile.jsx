@@ -17,7 +17,7 @@ export default function Profile() {
 
     useEffect(() => {
         fetch(
-            `http://localhost:5000/api/v2/user/profile?email=${"tejalnayak@gmail.com"}`,
+            `http://localhost:8000/api/v2/user/profile?email=${"tejalnayak@gmail.com"}`,
             {
                 method: "GET",
                 headers: {
@@ -55,7 +55,7 @@ export default function Profile() {
                                     PICTURE
                                 </div>
                                 <img
-                                    src={`http://localhost:5000/${personalDetails.avatarUrl}` || `https://cdn.vectorstock.com/i/500p/17/61/male-avatar-profile-picture-vector-10211761.jpg`}
+                                    src={`http://localhost:8000/${personalDetails.avatarUrl}` || `https://cdn.vectorstock.com/i/500p/17/61/male-avatar-profile-picture-vector-10211761.jpg`}
                                     alt="profile"
                                     className="w-40 h-40 rounded-full"
                                     onError={(e) => {

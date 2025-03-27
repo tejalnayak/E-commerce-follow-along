@@ -5,7 +5,7 @@ import Nav from '../components/NavBar'
 
 const MyOrdersPage = () => {
     const [orders, setOrders] = useState([]);
-    const defaultEmail = 'oviya.s@gmail.com';
+    const defaultEmail = 'tejalnayak@gmail.com';
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 

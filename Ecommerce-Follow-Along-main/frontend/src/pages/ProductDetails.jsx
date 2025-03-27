@@ -18,7 +18,7 @@ export default function ProductDetails() {
 		const fetchProduct = async () => {
 			try {
 				const response = await axios.get(
-					`http://localhost:5000/api/v2/product/product/${id}`
+					`http://localhost:8000/api/v2/product/product/${id}`
 				);
 				console.log("Fetched product:", response.data.product);
 				setProduct(response.data.product); // Ensure correct state setting
@@ -54,7 +54,7 @@ export default function ProductDetails() {
 	const addtocart = async () => {
 		try {
 			const response = await axios.post(
-				"http://localhost:5000/api/v2/product/cart",
+				"http://localhost:8000/api/v2/product/cart",
 				{
 					userId: email,
 					productId: id,
@@ -104,7 +104,7 @@ export default function ProductDetails() {
 						<div className="w-full bsm:w-2/3 md:w-1/3 rounded-lg">
 							{product.images && product.images.length > 0 ? (
 								<img
-									src={`http://localhost:5000${product.images[0]}`}
+									src={`http://localhost:8000${product.images[0]}`}
 									alt={product.name}
 									className="w-full h-full object-contain bsm:object-cover"
 									style={{ maxHeight: "500px" }} // Adjust the max height as needed
